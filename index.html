@@ -106,11 +106,32 @@
                     </span>
                 </h1>
                 
-                <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-10 leading-relaxed max-w-3xl mx-auto">
-                    可安装在老电脑上的网络存储系统, 基于现代 OpenZFS 技术构建的企业级 NAS 解决方案。
-                    <br class="hidden md:block">
-                    简单、安全、高效，为您的数据提供最强保障, 初级用户即可完全掌控。
-                </p>
+                <!-- Slider -->
+                <div class="relative mb-10 max-w-3xl mx-auto overflow-hidden">
+                    <div id="hero-slider" class="flex transition-transform duration-700 ease-in-out">
+                        <div class="w-full flex-shrink-0 px-4">
+                            <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 leading-relaxed">
+                                可安装在老电脑上的网络存储系统
+                            </p>
+                        </div>
+                        <div class="w-full flex-shrink-0 px-4">
+                            <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 leading-relaxed">
+                                基于现代 OpenZFS 技术构建的企业级 NAS 解决方案
+                            </p>
+                        </div>
+                        <div class="w-full flex-shrink-0 px-4">
+                            <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 leading-relaxed">
+                                简单、安全、高效，为您的数据提供最强保障，初级用户即可完全掌控
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Dots -->
+                    <div class="flex justify-center gap-2 mt-6">
+                        <button class="slider-dot w-3 h-3 rounded-full bg-primary-600 transition-all duration-300" data-index="0"></button>
+                        <button class="slider-dot w-3 h-3 rounded-full bg-gray-300 dark:bg-gray-600 transition-all duration-300" data-index="1"></button>
+                        <button class="slider-dot w-3 h-3 rounded-full bg-gray-300 dark:bg-gray-600 transition-all duration-300" data-index="2"></button>
+                    </div>
+                </div>
                 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                     <a href="#download" class="w-full sm:w-auto px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-xl transition shadow-xl shadow-primary-600/30 flex items-center justify-center gap-2">
@@ -207,7 +228,7 @@
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">简单专注</h3>
                     <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-                        原生支持SMB文件共享协议。
+                        原生支持SMB文件共享协议, Windows好伙伴, 支持多种RAID!
                     </p>
                 </div>
 
@@ -324,38 +345,31 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <!-- ISO -->
+                <!-- VirtualBox -->
                 <div class="p-8 rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:shadow-xl transition text-center">
                     <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900/50 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-compact-disc text-primary-600 dark:text-primary-400 text-2xl"></i>
+                        <i class="fas fa-cube text-primary-600 dark:text-primary-400 text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">ISO 镜像</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">物理机或虚拟机安装</p>
-                    <div class="space-y-2">
-                        <a href="#" class="block w-full py-3 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition">
-                            下载 ISO (x64)
-                        </a>
-                        <span class="text-xs text-gray-500 dark:text-gray-500">v2.0.1 - 1.2 GB</span>
-                    </div>
-                </div>
-
-                <!-- Docker -->
-                <div class="p-8 rounded-2xl bg-gradient-to-br from-primary-500 to-primary-700 text-white text-center transform md:-translate-y-4 shadow-xl">
-                    <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-6 backdrop-blur">
-                        <i class="fab fa-docker text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Docker</h3>
-                    <p class="text-primary-100 text-sm mb-6">推荐方式，快速部署</p>
-                    <div class="bg-black/30 rounded-lg p-4 mb-4 font-mono text-xs text-left overflow-x-auto">
-                        <code>docker run -d \
-  --name onenas \
-  -p 8080:80 \
-  -v /data:/data \
-  onenas/onenas:latest</code>
-                    </div>
-                    <a href="#" class="block w-full py-3 bg-white text-primary-600 font-medium rounded-lg hover:bg-gray-100 transition">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Oracle VirtualBox</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">快速体验</p>
+                    <a href="#" class="block w-full py-3 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition">
                         查看文档
                     </a>
+                </div>
+
+                <!-- ISO 镜像（高亮） -->
+                <div class="p-8 rounded-2xl bg-gradient-to-br from-primary-500 to-primary-700 text-white text-center transform md:-translate-y-4 shadow-xl">
+                    <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-6 backdrop-blur">
+                        <i class="fas fa-compact-disc text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">ISO 镜像</h3>
+                    <p class="text-primary-100 text-sm mb-6">物理机或虚拟机安装</p>
+                    <div class="space-y-2">
+                        <a href="OneNAS-SCALE-zuti260609.iso" class="block w-full py-3 bg-white text-primary-600 font-medium rounded-lg hover:bg-gray-100 transition">
+                            下载 ISO (x64)
+                        </a>
+                        <span class="text-xs text-primary-200">OneNAS-zuti260609 - 1.1 GB</span>
+                    </div>
                 </div>
 
                 <!-- Script -->
@@ -363,10 +377,10 @@
                     <div class="w-16 h-16 bg-gray-100 dark:bg-gray-700 rounded-2xl flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-terminal text-gray-600 dark:text-gray-300 text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">一键脚本</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">现有 Linux 系统安装</p>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Linux写启动U盘</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">Linux 系统运行</p>
                     <div class="bg-gray-100 dark:bg-gray-900 rounded-lg p-4 mb-4 font-mono text-xs text-left overflow-x-auto">
-                        <code class="text-gray-800 dark:text-gray-300">curl -fsSL https://onen.as/install | bash</code>
+                        <code class="text-gray-800 dark:text-gray-300">sudo  dd if=OneNAS-SCALE-zuti260609.iso of=/dev/sdb bs=4M status=progress oflag=sync</code>
                     </div>
                     <a href="#" class="block w-full py-3 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 font-medium rounded-lg transition">
                         安装指南
@@ -421,7 +435,7 @@
                     <div class="p-8 bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700">
                         <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">加入社区</h3>
                         <div class="space-y-4">
-                            <a href="https://github.com/wenewzhang/webui" target="_blank" class="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700/50 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition">
+                            <a href="https://github.com/wenewzhang/onenas-website" target="_blank" class="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700/50 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition">
                                 <div class="flex items-center gap-3">
                                     <i class="fab fa-github text-2xl text-gray-700 dark:text-gray-300"></i>
                                     <span class="font-medium text-gray-900 dark:text-white">GitHub</span>
@@ -442,19 +456,38 @@
                                 </div>
                                 <span class="text-sm text-gray-500 dark:text-gray-400">中文群组</span>
                             </a>
-                            <a href="#" class="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700/50 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition">
+                            <button onclick="openWechatModal()" class="w-full flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700/50 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition text-left">
                                 <div class="flex items-center gap-3">
                                     <i class="fab fa-weixin text-2xl text-green-500"></i>
                                     <span class="font-medium text-gray-900 dark:text-white">微信群</span>
                                 </div>
                                 <span class="text-sm text-gray-500 dark:text-gray-400">扫码加入</span>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- WeChat Modal -->
+    <div id="wechat-modal" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/60 backdrop-blur-sm" onclick="closeWechatModal(event)">
+        <div class="relative bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-6 max-w-sm w-full mx-4 transform transition-all scale-95 opacity-0" id="wechat-modal-content">
+            <button onclick="closeWechatModal()" class="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-500 dark:text-gray-400 transition">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="text-center">
+                <div class="w-12 h-12 bg-green-100 dark:bg-green-900/50 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fab fa-weixin text-2xl text-green-500"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">加入微信群</h3>
+                <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">微信扫码，加入 OneNAS 用户群</p>
+                <div class="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700">
+                    <img src="wechat.jpg" alt="微信群二维码" class="w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- CTA Section -->
     <section class="py-24">
@@ -569,6 +602,87 @@
                     });
                 }
             });
+        });
+
+        // Hero Slider
+        (function() {
+            const slider = document.getElementById('hero-slider');
+            if (!slider) return;
+            const dots = document.querySelectorAll('.slider-dot');
+            const total = 3;
+            let current = 0;
+            let interval;
+
+            function goTo(index) {
+                current = index;
+                slider.style.transform = 'translateX(-' + (index * 100) + '%)';
+                dots.forEach((dot, i) => {
+                    if (i === index) {
+                        dot.classList.remove('bg-gray-300', 'dark:bg-gray-600');
+                        dot.classList.add('bg-primary-600');
+                    } else {
+                        dot.classList.remove('bg-primary-600');
+                        dot.classList.add('bg-gray-300', 'dark:bg-gray-600');
+                    }
+                });
+            }
+
+            dots.forEach(dot => {
+                dot.addEventListener('click', () => {
+                    goTo(parseInt(dot.dataset.index));
+                    resetInterval();
+                });
+            });
+
+            function next() {
+                goTo((current + 1) % total);
+            }
+
+            function resetInterval() {
+                clearInterval(interval);
+                interval = setInterval(next, 4000);
+            }
+
+            interval = setInterval(next, 4000);
+        })();
+
+        // WeChat Modal
+        function openWechatModal() {
+            const modal = document.getElementById('wechat-modal');
+            const content = document.getElementById('wechat-modal-content');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            // 触发重绘以启动过渡动画
+            requestAnimationFrame(() => {
+                content.classList.remove('scale-95', 'opacity-0');
+                content.classList.add('scale-100', 'opacity-100');
+            });
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeWechatModal(event) {
+            // 如果传入了事件，且点击的是内容区域内部，则不关闭
+            if (event && event.target.closest('#wechat-modal-content')) {
+                return;
+            }
+            const modal = document.getElementById('wechat-modal');
+            const content = document.getElementById('wechat-modal-content');
+            content.classList.remove('scale-100', 'opacity-100');
+            content.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.style.overflow = '';
+            }, 200);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                const modal = document.getElementById('wechat-modal');
+                if (modal && !modal.classList.contains('hidden')) {
+                    closeWechatModal();
+                }
+            }
         });
     </script>
 </body>
