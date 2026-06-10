@@ -52,10 +52,10 @@ plugins:
 extra:
   alternate:
     - name: 中文
-      link: /zh/
+      link: /docs/site/
       lang: zh
     - name: English
-      link: /en/
+      link: /docs/site/en/
       lang: en
 
 nav:

@@ -13,6 +13,7 @@ rsync -avz \
   --exclude='*.sh' \
   --exclude='docs/mkdocs.yml' \
   --exclude='docs/docs' \
+  --exclude='docs/.venv' \
   ./ \
   "${REMOTE_HOST}:${REMOTE_DIR}"
 
