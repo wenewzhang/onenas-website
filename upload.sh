@@ -1,0 +1,17 @@
+#!/bin/bash
+set -e
+
+REMOTE_HOST="154.17.21.121"
+REMOTE_DIR="/home/onenas/"
+
+echo "正在同步文件到 ${REMOTE_HOST}:${REMOTE_DIR} ..."
+echo "排除规则: *.py, *.sh"
+
+rsync -avz \
+  --exclude='.git' \
+  --exclude='*.py' \
+  --exclude='*.sh' \
+  ./ \
+  "${REMOTE_HOST}:${REMOTE_DIR}"
+
+echo "上传完成"

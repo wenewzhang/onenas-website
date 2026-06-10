@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-CN" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OneNAS - 开源网络存储系统</title>
-    <meta name="description" content="OneNAS - 企业级开源网络存储系统，基于现代Web技术构建的高性能NAS解决方案">
+    <title>OneNAS - Open Source Network Storage System</title>
+    <meta name="description" content="OneNAS - Enterprise-grade open source network storage system, a high-performance NAS solution built with modern Web technologies">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -47,23 +47,23 @@
                 </div>
                 
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#features" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition">特性</a>
-                    <a href="#compare" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition">对比</a>
-                    <a href="#download" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition">下载</a>
-                    <a href="#docs" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition">文档</a>
-                    <a href="#community" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition">社区</a>
+                    <a href="#features" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition">Features</a>
+                    <a href="#compare" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition">Compare</a>
+                    <a href="#download" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition">Download</a>
+                    <a href="#docs" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition">Docs</a>
+                    <a href="#community" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition">Community</a>
                 </div>
 
                 <div class="flex items-center space-x-4">
                     <div class="relative" id="lang-menu-container">
                         <button onclick="toggleLangMenu()" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition flex items-center gap-1 text-gray-600 dark:text-gray-300">
                             <i class="fas fa-globe"></i>
-                            <span class="text-sm font-medium hidden sm:inline">中文</span>
+                            <span class="text-sm font-medium hidden sm:inline">English</span>
                             <i class="fas fa-chevron-down text-xs"></i>
                         </button>
                         <div id="lang-menu" class="hidden absolute right-0 mt-2 w-32 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 py-1 z-50">
-                            <a href="index.html" class="block px-4 py-2 text-sm text-primary-600 dark:text-primary-400 font-medium bg-primary-50 dark:bg-primary-900/20">中文</a>
-                            <a href="index-en.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">English</a>
+                            <a href="index.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">中文</a>
+                            <a href="index-en.html" class="block px-4 py-2 text-sm text-primary-600 dark:text-primary-400 font-medium bg-primary-50 dark:bg-primary-900/20">English</a>
                         </div>
                     </div>
                     <button onclick="toggleDark()" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition">
@@ -71,7 +71,7 @@
                         <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
                     </button>
                     <a href="#download" class="hidden md:inline-flex items-center px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition shadow-lg shadow-primary-600/30">
-                        立即下载
+                        Download Now
                     </a>
                 </div>
 
@@ -84,15 +84,15 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
             <div class="px-4 pt-2 pb-4 space-y-1">
-                <a href="#features" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">特性</a>
-                <a href="#compare" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">对比</a>
-                <a href="#download" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">下载</a>
-                <a href="#docs" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">文档</a>
-                <a href="#community" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">社区</a>
+                <a href="#features" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">Features</a>
+                <a href="#compare" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">Compare</a>
+                <a href="#download" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">Download</a>
+                <a href="#docs" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">Docs</a>
+                <a href="#community" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">Community</a>
                 <div class="border-t border-gray-200 dark:border-gray-700 pt-2 mt-2">
-                    <div class="px-3 py-2 text-sm text-gray-500 dark:text-gray-400">语言</div>
-                    <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/20">中文</a>
-                    <a href="index-en.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">English</a>
+                    <div class="px-3 py-2 text-sm text-gray-500 dark:text-gray-400">Language</div>
+                    <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">中文</a>
+                    <a href="index-en.html" class="block px-3 py-2 rounded-md text-base font-medium text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/20">English</a>
                 </div>
             </div>
         </div>
@@ -109,16 +109,16 @@
             <div class="text-center max-w-4xl mx-auto">
                 <div class="inline-flex items-center px-4 py-2 rounded-full bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 text-sm font-medium mb-8 border border-primary-200 dark:border-primary-800">
                     <span class="w-2 h-2 bg-primary-500 rounded-full mr-2 animate-pulse"></span>
-                    OneNAS 260609 正式发布
+                    OneNAS 260609 Officially Released
                 </div>
                 
                 <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
                     <span class="bg-gradient-to-r from-gray-900 via-primary-700 to-primary-600 dark:from-white dark:via-primary-300 dark:to-primary-400 bg-clip-text text-transparent">
-                        下一代开源
+                        Next-Generation Open Source
                     </span>
                     <br>
                     <span class="bg-gradient-to-r from-primary-600 to-blue-600 dark:from-primary-400 dark:to-blue-400 bg-clip-text text-transparent">
-                        网络存储系统
+                        Network Storage System
                     </span>
                 </h1>
                 
@@ -127,17 +127,17 @@
                     <div id="hero-slider" class="flex transition-transform duration-700 ease-in-out">
                         <div class="w-full flex-shrink-0 px-4">
                             <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 leading-relaxed">
-                                可安装在老电脑上的网络存储系统
+                                A network storage system that can be installed on old computers
                             </p>
                         </div>
                         <div class="w-full flex-shrink-0 px-4">
                             <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 leading-relaxed">
-                                基于现代 OpenZFS 技术构建的企业级 NAS 解决方案
+                                Enterprise-grade NAS solution built on modern OpenZFS technology
                             </p>
                         </div>
                         <div class="w-full flex-shrink-0 px-4">
                             <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 leading-relaxed">
-                                简单、安全、高效，为您的数据提供最强保障，初级用户即可完全掌控
+                                Simple, secure, and efficient, providing the strongest protection for your data, fully controllable by beginners
                             </p>
                         </div>
                     </div>
@@ -152,18 +152,18 @@
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                     <a href="#download" class="w-full sm:w-auto px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-xl transition shadow-xl shadow-primary-600/30 flex items-center justify-center gap-2">
                         <i class="fas fa-download"></i>
-                        免费下载
+                        Free Download
                     </a>
                     <a href="#features" class="w-full sm:w-auto px-8 py-4 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 font-semibold rounded-xl border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition flex items-center justify-center gap-2">
                         <i class="fas fa-play-circle text-primary-600"></i>
-                        了解更多
+                        Learn More
                     </a>
                 </div>
 
                 <div class="mt-12 flex items-center justify-center gap-8 text-gray-500 dark:text-gray-400 text-sm">
                     <span class="flex items-center gap-2"><i class="fab fa-linux text-lg"></i> Linux</span>
                     <span class="flex items-center gap-2"><i class="fab fa-docker text-lg"></i> Docker</span>
-                    <span class="flex items-center gap-2"><i class="fab fa-github text-lg"></i> 开源</span>
+                    <span class="flex items-center gap-2"><i class="fab fa-github text-lg"></i> Open Source</span>
                 </div>
             </div>
         </div>
@@ -175,19 +175,19 @@
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 <div>
                     <div class="text-3xl md:text-4xl font-bold text-primary-600 dark:text-primary-400">50K+</div>
-                    <div class="text-gray-600 dark:text-gray-400 mt-1">活跃用户</div>
+                    <div class="text-gray-600 dark:text-gray-400 mt-1">Active Users</div>
                 </div>
                 <div>
                     <div class="text-3xl md:text-4xl font-bold text-primary-600 dark:text-primary-400">99.9%</div>
-                    <div class="text-gray-600 dark:text-gray-400 mt-1">运行稳定性</div>
+                    <div class="text-gray-600 dark:text-gray-400 mt-1">Uptime Stability</div>
                 </div>
                 <div>
                     <div class="text-3xl md:text-4xl font-bold text-primary-600 dark:text-primary-400">100+</div>
-                    <div class="text-gray-600 dark:text-gray-400 mt-1">插件生态</div>
+                    <div class="text-gray-600 dark:text-gray-400 mt-1">Plugin Ecosystem</div>
                 </div>
                 <div>
                     <div class="text-3xl md:text-4xl font-bold text-primary-600 dark:text-primary-400">24/7</div>
-                    <div class="text-gray-600 dark:text-gray-400 mt-1">社区支持</div>
+                    <div class="text-gray-600 dark:text-gray-400 mt-1">Community Support</div>
                 </div>
             </div>
         </div>
@@ -197,9 +197,9 @@
     <section id="features" class="py-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">核心特性</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Core Features</h2>
                 <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-                    专为现代数据存储需求设计，提供全方位的存储管理功能
+                    Designed for modern data storage needs, providing comprehensive storage management capabilities
                 </p>
             </div>
 
@@ -209,9 +209,9 @@
                     <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900/50 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
                         <i class="fas fa-shield-alt text-primary-600 dark:text-primary-400 text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">数据安全</h3>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Data Security</h3>
                     <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-                        原生支持 OpenZFS，提供快照、校验和、自动修复、压缩与去重等企业级数据保护功能。
+                        Native OpenZFS support, providing enterprise-grade data protection with snapshots, checksums, auto-healing, compression, and deduplication.
                     </p>
                 </div>
 
@@ -220,9 +220,9 @@
                     <div class="w-12 h-12 bg-green-100 dark:bg-green-900/50 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
                         <i class="fas fa-chart-line text-green-600 dark:text-green-400 text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">简单可靠</h3>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Simple & Reliable</h3>
                     <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-                        OneNAS基于Debian 13开发, 权限控制简单, 无需要专业知识, 完全掌控工业级存储。
+                        OneNAS is developed based on Debian 13, with simple permission control, no professional knowledge required, fully controllable industrial-grade storage.
                     </p>
                 </div>
 
@@ -231,9 +231,9 @@
                     <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/50 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
                         <i class="fas fa-boxes text-purple-600 dark:text-purple-400 text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">丰富插件</h3>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Rich Plugins</h3>
                     <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-                        一键安装 Docker、Plex、Nextcloud 等 100+ 应用，轻松扩展 NAS 功能。
+                        One-click installation of Docker, Plex, Nextcloud, and 100+ applications, easily extending NAS functionality.
                     </p>
                 </div>
 
@@ -242,9 +242,9 @@
                     <div class="w-12 h-12 bg-orange-100 dark:bg-orange-900/50 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
                         <i class="fas fa-network-wired text-orange-600 dark:text-orange-400 text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">简单专注</h3>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Simple & Focused</h3>
                     <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-                        原生支持SMB文件共享协议, Windows好伙伴, 支持多种RAID!
+                        Native SMB file sharing protocol support, great companion for Windows, supports multiple RAID configurations!
                     </p>
                 </div>
 
@@ -253,9 +253,9 @@
                     <div class="w-12 h-12 bg-red-100 dark:bg-red-900/50 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
                         <i class="fas fa-sync-alt text-red-600 dark:text-red-400 text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">自动备份(开发中)</h3>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Auto Backup (In Development)</h3>
                     <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-                        支持 Rsync、Rclone、Duplicati 等备份工具，可同步到云端或远程服务器。
+                        Supports Rsync, Rclone, Duplicati, and other backup tools, sync to cloud or remote servers.
                     </p>
                 </div>
 
@@ -264,9 +264,9 @@
                     <div class="w-12 h-12 bg-cyan-100 dark:bg-cyan-900/50 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
                         <i class="fas fa-mobile-alt text-cyan-600 dark:text-cyan-400 text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">现代 Web UI</h3>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Modern Web UI</h3>
                     <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-                        基于 Vue 3 + Tailwind CSS 的响应式管理界面，支持手机、平板、PC 全平台访问。
+                        Responsive management interface based on Vue 3 + Tailwind CSS, supporting mobile, tablet, and PC access across all platforms.
                     </p>
                 </div>
             </div>
@@ -277,9 +277,9 @@
     <section id="compare" class="py-24 bg-gray-50 dark:bg-gray-800/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">为什么选择 OneNAS</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Why Choose OneNAS</h2>
                 <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-                    对比主流 NAS 系统，OneNAS 在易用性、性能和生态上都有出色表现
+                    Compared to mainstream NAS systems, OneNAS excels in ease of use, performance, and ecosystem
                 </p>
             </div>
 
@@ -287,58 +287,58 @@
                 <table class="w-full max-w-5xl mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
                     <thead>
                         <tr class="bg-gray-100 dark:bg-gray-700">
-                            <th class="px-6 py-4 text-left text-gray-700 dark:text-gray-300 font-semibold">功能特性</th>
+                            <th class="px-6 py-4 text-left text-gray-700 dark:text-gray-300 font-semibold">Feature</th>
                             <th class="px-6 py-4 text-center text-primary-600 dark:text-primary-400 font-bold">OneNAS</th>
                             <th class="px-6 py-4 text-center text-gray-700 dark:text-gray-300 font-semibold">TrueNAS</th>
                             <th class="px-6 py-4 text-center text-gray-700 dark:text-gray-300 font-semibold">OMV</th>
-                            <th class="px-6 py-4 text-center text-gray-700 dark:text-gray-300 font-semibold">群晖</th>
+                            <th class="px-6 py-4 text-center text-gray-700 dark:text-gray-300 font-semibold">Synology</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
                         <tr>
-                            <td class="px-6 py-4 text-gray-700 dark:text-gray-300">开源免费</td>
+                            <td class="px-6 py-4 text-gray-700 dark:text-gray-300">Open Source & Free</td>
                             <td class="px-6 py-4 text-center"><i class="fas fa-check-circle text-green-500 text-lg"></i></td>
                             <td class="px-6 py-4 text-center"><i class="fas fa-check-circle text-green-500 text-lg"></i></td>
                             <td class="px-6 py-4 text-center"><i class="fas fa-check-circle text-green-500 text-lg"></i></td>
                             <td class="px-6 py-4 text-center"><i class="fas fa-times-circle text-red-400 text-lg"></i></td>
                         </tr>
                         <tr class="bg-gray-50/50 dark:bg-gray-700/30">
-                            <td class="px-6 py-4 text-gray-700 dark:text-gray-300">硬件要求低</td>
+                            <td class="px-6 py-4 text-gray-700 dark:text-gray-300">Low Hardware Requirements</td>
                             <td class="px-6 py-4 text-center"><i class="fas fa-check-circle text-green-500 text-lg"></i></td>
                             <td class="px-6 py-4 text-center"><i class="fas fa-times-circle text-red-400 text-lg"></i></td>
                             <td class="px-6 py-4 text-center"><i class="fas fa-check-circle text-green-500 text-lg"></i></td>
                             <td class="px-6 py-4 text-center"><i class="fas fa-minus-circle text-yellow-500 text-lg"></i></td>
                         </tr>
                         <tr>
-                            <td class="px-6 py-4 text-gray-700 dark:text-gray-300">Docker 原生支持</td>
+                            <td class="px-6 py-4 text-gray-700 dark:text-gray-300">Native Docker Support</td>
                             <td class="px-6 py-4 text-center"><i class="fas fa-check-circle text-green-500 text-lg"></i></td>
                             <td class="px-6 py-4 text-center"><i class="fas fa-check-circle text-green-500 text-lg"></i></td>
                             <td class="px-6 py-4 text-center"><i class="fas fa-check-circle text-green-500 text-lg"></i></td>
                             <td class="px-6 py-4 text-center"><i class="fas fa-check-circle text-green-500 text-lg"></i></td>
                         </tr>
                         <tr class="bg-gray-50/50 dark:bg-gray-700/30">
-                            <td class="px-6 py-4 text-gray-700 dark:text-gray-300">OpenZFS 支持</td>
+                            <td class="px-6 py-4 text-gray-700 dark:text-gray-300">OpenZFS Support</td>
                             <td class="px-6 py-4 text-center"><i class="fas fa-check-circle text-green-500 text-lg"></i></td>
                             <td class="px-6 py-4 text-center"><i class="fas fa-check-circle text-green-500 text-lg"></i></td>
                             <td class="px-6 py-4 text-center"><i class="fas fa-minus-circle text-yellow-500 text-lg"></i></td>
                             <td class="px-6 py-4 text-center"><i class="fas fa-minus-circle text-yellow-500 text-lg"></i></td>
                         </tr>
                         <tr>
-                            <td class="px-6 py-4 text-gray-700 dark:text-gray-300">现代 Web UI</td>
+                            <td class="px-6 py-4 text-gray-700 dark:text-gray-300">Modern Web UI</td>
                             <td class="px-6 py-4 text-center"><i class="fas fa-check-circle text-green-500 text-lg"></i></td>
                             <td class="px-6 py-4 text-center"><i class="fas fa-minus-circle text-yellow-500 text-lg"></i></td>
                             <td class="px-6 py-4 text-center"><i class="fas fa-minus-circle text-yellow-500 text-lg"></i></td>
                             <td class="px-6 py-4 text-center"><i class="fas fa-check-circle text-green-500 text-lg"></i></td>
                         </tr>
                         <tr class="bg-gray-50/50 dark:bg-gray-700/30">
-                            <td class="px-6 py-4 text-gray-700 dark:text-gray-300">插件生态丰富</td>
+                            <td class="px-6 py-4 text-gray-700 dark:text-gray-300">Rich Plugin Ecosystem</td>
                             <td class="px-6 py-4 text-center"><i class="fas fa-check-circle text-green-500 text-lg"></i></td>
                             <td class="px-6 py-4 text-center"><i class="fas fa-minus-circle text-yellow-500 text-lg"></i></td>
                             <td class="px-6 py-4 text-center"><i class="fas fa-check-circle text-green-500 text-lg"></i></td>
                             <td class="px-6 py-4 text-center"><i class="fas fa-check-circle text-green-500 text-lg"></i></td>
                         </tr>
                         <tr>
-                            <td class="px-6 py-4 text-gray-700 dark:text-gray-300">中文本地化</td>
+                            <td class="px-6 py-4 text-gray-700 dark:text-gray-300">Chinese Localization</td>
                             <td class="px-6 py-4 text-center"><i class="fas fa-check-circle text-green-500 text-lg"></i></td>
                             <td class="px-6 py-4 text-center"><i class="fas fa-minus-circle text-yellow-500 text-lg"></i></td>
                             <td class="px-6 py-4 text-center"><i class="fas fa-minus-circle text-yellow-500 text-lg"></i></td>
@@ -354,9 +354,9 @@
     <section id="download" class="py-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">下载 OneNAS</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Download OneNAS</h2>
                 <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-                    选择适合您的安装方式，几分钟内即可部署完成
+                    Choose the installation method that suits you, deploy within minutes
                 </p>
             </div>
 
@@ -367,22 +367,22 @@
                         <i class="fas fa-cube text-primary-600 dark:text-primary-400 text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Oracle VirtualBox</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">快速体验</p>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">Quick Experience</p>
                     <a href="#" class="block w-full py-3 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition">
-                        查看文档
+                        View Docs
                     </a>
                 </div>
 
-                <!-- ISO 镜像（高亮） -->
+                <!-- ISO Image (Highlighted) -->
                 <div class="p-8 rounded-2xl bg-gradient-to-br from-primary-500 to-primary-700 text-white text-center transform md:-translate-y-4 shadow-xl">
                     <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-6 backdrop-blur">
                         <i class="fas fa-compact-disc text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">ISO 镜像</h3>
-                    <p class="text-primary-100 text-sm mb-6">物理机或虚拟机安装</p>
+                    <h3 class="text-xl font-bold mb-2">ISO Image</h3>
+                    <p class="text-primary-100 text-sm mb-6">Physical or VM Installation</p>
                     <div class="space-y-2">
                         <a href="onenas/OneNAS-SCALE-zuti260609.iso" class="block w-full py-3 bg-white text-primary-600 font-medium rounded-lg hover:bg-gray-100 transition">
-                            下载 ISO (x64)
+                            Download ISO (x64)
                         </a>
                         <span class="text-xs text-primary-200">OneNAS-zuti260609 - 1.1 GB</span>
                     </div>
@@ -393,13 +393,13 @@
                     <div class="w-16 h-16 bg-gray-100 dark:bg-gray-700 rounded-2xl flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-terminal text-gray-600 dark:text-gray-300 text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Linux写启动U盘</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">Linux 系统运行</p>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Linux Bootable USB</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">Run on Linux</p>
                     <div class="bg-gray-100 dark:bg-gray-900 rounded-lg p-4 mb-4 font-mono text-xs text-left overflow-x-auto">
-                        <code class="text-gray-800 dark:text-gray-300">sudo  dd if=OneNAS-SCALE-zuti260609.iso of=/dev/sdb bs=4M status=progress oflag=sync</code>
+                        <code class="text-gray-800 dark:text-gray-300">sudo dd if=OneNAS-SCALE-zuti260609.iso of=/dev/sdb bs=4M status=progress oflag=sync</code>
                     </div>
                     <a href="#" class="block w-full py-3 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 font-medium rounded-lg transition">
-                        安装指南
+                        Installation Guide
                     </a>
                 </div>
             </div>
@@ -412,10 +412,10 @@
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                        完善的文档体系
+                        Comprehensive Documentation
                     </h2>
                     <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">
-                        从快速入门到高级配置，全面的文档帮助您轻松上手 OneNAS。包含视频教程、API 文档和最佳实践指南。
+                        From quick start to advanced configuration, comprehensive documentation helps you get started with OneNAS easily. Includes video tutorials, API documentation, and best practice guides.
                     </p>
                     <div class="space-y-4">
                         <a href="#" class="flex items-center p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary-300 dark:hover:border-primary-700 hover:shadow-md transition">
@@ -423,8 +423,8 @@
                                 <i class="fas fa-book text-blue-600 dark:text-blue-400"></i>
                             </div>
                             <div>
-                                <div class="font-semibold text-gray-900 dark:text-white">快速入门指南</div>
-                                <div class="text-sm text-gray-500 dark:text-gray-400">5 分钟完成安装配置</div>
+                                <div class="font-semibold text-gray-900 dark:text-white">Quick Start Guide</div>
+                                <div class="text-sm text-gray-500 dark:text-gray-400">Install & configure in 5 minutes</div>
                             </div>
                         </a>
                         <a href="#" class="flex items-center p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary-300 dark:hover:border-primary-700 hover:shadow-md transition">
@@ -432,8 +432,8 @@
                                 <i class="fas fa-code text-purple-600 dark:text-purple-400"></i>
                             </div>
                             <div>
-                                <div class="font-semibold text-gray-900 dark:text-white">API 文档</div>
-                                <div class="text-sm text-gray-500 dark:text-gray-400">完整的 RESTful API 参考</div>
+                                <div class="font-semibold text-gray-900 dark:text-white">API Documentation</div>
+                                <div class="text-sm text-gray-500 dark:text-gray-400">Complete RESTful API reference</div>
                             </div>
                         </a>
                         <a href="#" class="flex items-center p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary-300 dark:hover:border-primary-700 hover:shadow-md transition">
@@ -441,15 +441,15 @@
                                 <i class="fas fa-graduation-cap text-orange-600 dark:text-orange-400"></i>
                             </div>
                             <div>
-                                <div class="font-semibold text-gray-900 dark:text-white">视频教程</div>
-                                <div class="text-sm text-gray-500 dark:text-gray-400">手把手教学，从入门到精通</div>
+                                <div class="font-semibold text-gray-900 dark:text-white">Video Tutorials</div>
+                                <div class="text-sm text-gray-500 dark:text-gray-400">Hands-on tutorials from beginner to expert</div>
                             </div>
                         </a>
                     </div>
                 </div>
                 <div id="community" class="space-y-6">
                     <div class="p-8 bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700">
-                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">加入社区</h3>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Join Community</h3>
                         <div class="space-y-4">
                             <a href="https://github.com/wenewzhang/onenas-website" target="_blank" class="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700/50 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition">
                                 <div class="flex items-center gap-3">
@@ -463,21 +463,21 @@
                                     <i class="fab fa-discord text-2xl text-indigo-500"></i>
                                     <span class="font-medium text-gray-900 dark:text-white">Discord</span>
                                 </div>
-                                <span class="text-sm text-gray-500 dark:text-gray-400">2.1k 成员</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400">2.1k Members</span>
                             </a>
                             <a href="#" class="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700/50 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition">
                                 <div class="flex items-center gap-3">
                                     <i class="fab fa-telegram text-2xl text-blue-500"></i>
                                     <span class="font-medium text-gray-900 dark:text-white">Telegram</span>
                                 </div>
-                                <span class="text-sm text-gray-500 dark:text-gray-400">中文群组</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400">Chinese Group</span>
                             </a>
                             <button onclick="openWechatModal()" class="w-full flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700/50 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition text-left">
                                 <div class="flex items-center gap-3">
                                     <i class="fab fa-weixin text-2xl text-green-500"></i>
-                                    <span class="font-medium text-gray-900 dark:text-white">微信群</span>
+                                    <span class="font-medium text-gray-900 dark:text-white">WeChat Group</span>
                                 </div>
-                                <span class="text-sm text-gray-500 dark:text-gray-400">扫码加入</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400">Scan to Join</span>
                             </button>
                         </div>
                     </div>
@@ -496,10 +496,10 @@
                 <div class="w-12 h-12 bg-green-100 dark:bg-green-900/50 rounded-full flex items-center justify-center mx-auto mb-4">
                     <i class="fab fa-weixin text-2xl text-green-500"></i>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">加入微信群</h3>
-                <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">微信扫码，加入 OneNAS 用户群</p>
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Join WeChat Group</h3>
+                <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">Scan with WeChat to join the OneNAS user group</p>
                 <div class="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700">
-                    <img src="wechat.jpg" alt="微信群二维码" class="w-full h-auto">
+                    <img src="wechat.jpg" alt="WeChat QR Code" class="w-full h-auto">
                 </div>
             </div>
         </div>
@@ -512,16 +512,16 @@
                 <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                 <div class="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
                 
-                <h2 class="text-3xl md:text-5xl font-bold mb-6 relative z-10">准备好体验 OneNAS 了吗？</h2>
+                <h2 class="text-3xl md:text-5xl font-bold mb-6 relative z-10">Ready to Experience OneNAS?</h2>
                 <p class="text-xl text-primary-100 mb-10 max-w-2xl mx-auto relative z-10">
-                    免费开源，永久使用。立即开始构建您的私人云存储。
+                    Free and open source, forever. Start building your private cloud storage now.
                 </p>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
                     <a href="#download" class="w-full sm:w-auto px-8 py-4 bg-white text-primary-700 font-bold rounded-xl hover:bg-gray-100 transition shadow-lg">
-                        免费下载 OneNAS
+                        Download OneNAS for Free
                     </a>
                     <a href="#" class="w-full sm:w-auto px-8 py-4 bg-primary-700 text-white font-bold rounded-xl hover:bg-primary-600 transition border border-primary-500">
-                        查看演示
+                        View Demo
                     </a>
                 </div>
             </div>
@@ -540,39 +540,39 @@
                         <span class="text-xl font-bold text-white">OneNAS</span>
                     </div>
                     <p class="text-sm leading-relaxed">
-                        开源网络存储系统，致力于为用户提供简单、安全、高效的数据存储解决方案。
+                        Open source network storage system, committed to providing users with simple, secure, and efficient data storage solutions.
                     </p>
                 </div>
                 <div>
-                    <h4 class="text-white font-semibold mb-4">产品</h4>
+                    <h4 class="text-white font-semibold mb-4">Product</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="hover:text-white transition">下载</a></li>
-                        <li><a href="#" class="hover:text-white transition">插件市场</a></li>
-                        <li><a href="#" class="hover:text-white transition">路线图</a></li>
-                        <li><a href="#" class="hover:text-white transition">更新日志</a></li>
+                        <li><a href="#" class="hover:text-white transition">Download</a></li>
+                        <li><a href="#" class="hover:text-white transition">Plugin Market</a></li>
+                        <li><a href="#" class="hover:text-white transition">Roadmap</a></li>
+                        <li><a href="#" class="hover:text-white transition">Changelog</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-white font-semibold mb-4">资源</h4>
+                    <h4 class="text-white font-semibold mb-4">Resources</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="hover:text-white transition">文档</a></li>
+                        <li><a href="#" class="hover:text-white transition">Docs</a></li>
                         <li><a href="#" class="hover:text-white transition">API</a></li>
-                        <li><a href="#" class="hover:text-white transition">论坛</a></li>
-                        <li><a href="#" class="hover:text-white transition">博客</a></li>
+                        <li><a href="#" class="hover:text-white transition">Forum</a></li>
+                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-white font-semibold mb-4">关于</h4>
+                    <h4 class="text-white font-semibold mb-4">About</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="hover:text-white transition">团队</a></li>
+                        <li><a href="#" class="hover:text-white transition">Team</a></li>
                         <li><a href="https://github.com/wenewzhang" target="_blank" class="hover:text-white transition">GitHub</a></li>
-                        <li><a href="#" class="hover:text-white transition">联系我们</a></li>
-                        <li><a href="#" class="hover:text-white transition">隐私政策</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>
             <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4">
-                <p class="text-sm">© 2024 OneNAS. 基于 MIT 协议开源。</p>
+                <p class="text-sm">© 2024 OneNAS. Open source under MIT License.</p>
                 <div class="flex items-center gap-4">
                     <a href="https://github.com/wenewzhang" target="_blank" class="hover:text-white transition"><i class="fab fa-github text-xl"></i></a>
                     <a href="#" class="hover:text-white transition"><i class="fab fa-twitter text-xl"></i></a>
@@ -682,7 +682,6 @@
             const content = document.getElementById('wechat-modal-content');
             modal.classList.remove('hidden');
             modal.classList.add('flex');
-            // 触发重绘以启动过渡动画
             requestAnimationFrame(() => {
                 content.classList.remove('scale-95', 'opacity-0');
                 content.classList.add('scale-100', 'opacity-100');
@@ -691,7 +690,6 @@
         }
 
         function closeWechatModal(event) {
-            // 如果传入了事件，且点击的是内容区域内部，则不关闭
             if (event && event.target.closest('#wechat-modal-content')) {
                 return;
             }
