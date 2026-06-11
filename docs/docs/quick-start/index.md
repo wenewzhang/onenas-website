@@ -6,7 +6,7 @@
 
 在开始之前，请确保您已准备好以下物品：
 
-- [ * ] OneNAS 设备或一台兼容的计算机
+- [ * ] 台式主机(PC) 或 带网口的笔记本电脑
 - [ * ] 至少一块硬盘（推荐使用 SSD 作为系统盘, 系统盘至少5G, 推荐60G）
 - [ * ] 网线一根 必须是一台有RJ45有线网口的电脑才可安装
 - [ * ] 可正常工作的网络环境
@@ -100,7 +100,7 @@
 
      ![设置 Root 密码](../images/installation/onenas-livecd-root-password.jpg)
 
-   - Root 密码是管理 OneNAS 系统最重要的密码之一，请务必牢记
+   - <span style="color: red;">root 密码是管理 OneNAS 系统最重要的密码之一</span>，请务必牢记
    - 输入密码并按回车键，再次输入确认密码
 
 8. **安装成功**
@@ -146,11 +146,12 @@
 
      ![创建管理员账户](../images/installation/onenas-create-admin-account.jpg)
 
-   - **注意**：管理 OneNAS 最重要的两个账号与密码，第一个是 root（在安装时已设置），第二个就是在此设定的管理员账户
+   - **注意**：<span style="color: red;">管理 OneNAS 最重要的两个账号与密码，第一个是root密码,在安装时已设置; 
+  第二个就是在此设定的管理员账户与密码</span>
    - 输入用户名、密码和确认密码
    - 点击**创建**按钮完成管理员账户创建
 
-3. **登录 Web 管理界面**
+1. **登录 Web 管理界面**
    - 使用刚创建的管理员账户登录
 
      ![Web 管理界面](../images/installation/onenas-admin-web.jpg)
