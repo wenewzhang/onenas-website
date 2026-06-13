@@ -11,8 +11,8 @@ If you are using OneNAS for the first time, we recommend starting with the [5-Mi
 ## Key Features
 
 - 🚀 **High Performance**: Built on modern storage technology for maximum read/write performance
-- 🔒 **Secure & Reliable**: Supports multiple RAID configurations and data protection mechanisms
-- 🌐 **Easy Access**: Supports SMB/NFS/AFP and other protocols
+- 🔒 **Secure & Reliable**: Supports multiple RAID (RAID0, RAID1, RAID10, RAIDZ1, RAIDZ2, RAIDZ3) configurations and data protection mechanisms
+- 🌐 **Easy Access**: Supports the SMB protocol — a great companion for Windows
 - 📱 **Anytime, Anywhere**: Remote management via web interface and mobile apps
 - 🛠️ **Easy Maintenance**: Intuitive graphical interface for effortless daily maintenance
 
