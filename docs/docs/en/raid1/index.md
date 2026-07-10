@@ -1,117 +1,119 @@
-# How to Create a RAID1 Mirror
+# How to Create a Hard Drive Mirror (RAID 1) to Manage Your Photo Album
 
-RAID1 (mirroring) is a storage configuration that writes the same data to two or more drives simultaneously. If one drive fails, the other drive retains a complete copy of the data, ensuring data safety.
+RAID1 (mirroring) is a storage solution that achieves data redundancy by writing data to two or more hard drives simultaneously. When one drive fails, the other drive still retains the complete data, thereby ensuring data safety.
 
-## RAID1 Characteristics
+## Characteristics of RAID1
 
-- ✅ **Data safety**: Every file has a complete mirror copy; single-drive failure does not cause data loss
-- ✅ **Improved read performance**: Data can be read from multiple drives at the same time
-- ⚠️ **Capacity is halved**: With two drives, usable capacity equals the size of the smallest drive
-- ⚠️ **Slightly lower write performance**: Each write must be synchronized to multiple drives
+- ✅ **Data Safety**: Every piece of data has a complete mirror copy; a single-drive failure will not result in data loss
+- ✅ **Improved Read Performance**: Data can be read from multiple drives simultaneously
+- ⚠️ **Capacity Halved**: The total usable capacity is 50% of the smallest drive's capacity (with two drives)
 
-## Use Cases
 
-- Storing important documents, photos, videos, and other irreplaceable data
+## Applicable Scenarios
+
+- Storing important files, photos, videos, and other data that cannot be lost
 - Core data storage for home or small office environments
-- Scenarios where data safety is more important than raw capacity
+- Scenarios where data security is more important than storage capacity
 
-## Prerequisites
+## Preparation
 
-Before creating a RAID1 mirror, please confirm the following:
+Before you start creating RAID1, please confirm:
 
-- [ ] At least two drives of the same or similar capacity (same brand and capacity recommended)
-- [ ] The drives are correctly installed and connected to the OneNAS device
-- [ ] You have logged in to the OneNAS web management interface
-- [ ] **Important**: Creating RAID1 will erase all data on the selected drives. Back up your data first.
+- [ * ] You have at least two drives of the same or similar capacity (same brand and capacity recommended)
+- [ * ] **Important**: Creating RAID1 will erase all data on the selected drives. Please back up your data in advance.
 
 !!! warning "Data Safety Warning"
-    During RAID1 creation, the selected drives will be initialized and partitioned, and all existing data will be erased. Please back up important data before proceeding.
+    During the RAID1 creation process, the selected drives will be initialized and partitioned, and all existing data will be cleared. Please make sure to back up important data before proceeding.
 
 ## Creation Steps
 
 ### 1. Log In to the Web Management Interface
 
-Enter the OneNAS IP address in your browser and log in with an administrator account.
+Enter the OneNAS IP address in your browser and log in with an **administrator account**.
 
-![Web Management Interface](../images/installation/onenas-admin-web.jpg)
+![Disk Management Interface](../../images/storage/OneNAS-storage.jpg)
 
-### 2. Open Storage Management
+| Partition | Purpose |
+|------|------|
+| sda1 | Boot drive, stores EFI and ZFSBootMenu related files |
+| sda2 | System drive, stores Debian-related system data |
+| sda3 | Data drive available for user data |
+| sdb, sdc | Data drives that can be used to create RAID 1. Note: The information displayed here is simplified. After the ZFS RAID 1 is created, the hard drives will be identified by their **UUID** |
 
-In the top navigation bar or side menu, click **Storage** to open the storage management page.
+### 2. Partition the Hard Drives
 
-### 3. Create a Storage Pool
+![Storage Operation Buttons](../../images/storage/storage-op.jpg)
 
-On the storage management page, click **Create Pool** or **Add Pool**.
+The image above shows the operation buttons in the storage management page. Their meanings are as follows:
 
-### 4. Configure the Storage Pool
+| Button | Description |
+|------|------|
+| **Create Partition** | Create a new partition for the selected hard drive |
+| **Clear Label** | Clear the partition label or identification information on the hard drive. If the hard drive was previously used for ZFS, clear the label before removing it; otherwise, the system will still read the ZFS label |
+| **Delete** | Delete the selected partition or hard drive (please confirm that data has been backed up before performing this action) |
 
-1. **Enter a pool name**
-   - Examples: `tank`, `data`, `raid1-pool`
-   - Use letters and numbers; avoid special characters
+###  3. Create RAID1
 
-2. **Select RAID1 type**
-   - In the layout or RAID level options, select **Mirror / RAID1**
-   - Depending on the interface, RAID1 may be labeled as **Mirror** or **RAID1**
+RAID1 can be created on two different hard drives, or on two partitions of two hard drives. Of course, for data safety, it is recommended to create it on two complete hard drives!
 
-### 5. Select Drives
+Click **Storage Pool** on the left -> **Create**, and the following storage pool creation interface will open:
 
-1. In the available disk list, check the two (or more) drives you want to include in the RAID1
-2. It is recommended to select drives with identical capacity to avoid wasting space
+![Create ZFS RAID1 Storage Pool](../../images/storage/zfs-raid1.jpg)
 
-!!! tip "Drive Selection Recommendations"
-    - Prefer drives with the same capacity and model
-    - Avoid mixing drives with different speeds or interface types
-    - If drive capacities differ, RAID1 usable capacity is determined by the smallest drive
+The image above is an example of creating a RAID1 storage pool. The meanings of each field are as follows:
 
-### 6. Confirm and Create
+| Field/Button | Description |
+|-----------|------|
+| **Data Pool Name** | The name of the storage pool, e.g., `Photos`. It is recommended to use English letters or numbers |
+| **Storage Pool Type** | Select `Mirror`, which is the ZFS mirror mode and equivalent to RAID1 |
+| **+ Add Disk** | Click to select the hard drives to be added to the mirror |
+| **Disk List** | The selected hard drives. In the image, the two disks are `sdb (20G)` and `sdc (20G)` |
+| **×** | Remove the corresponding hard drive |
+| **Cancel** | Abandon the creation and return to the previous level |
+| **Create** | Confirm the configuration and create the RAID1 storage pool |
 
-1. Review the configuration summary and confirm the RAID level is **RAID1 / Mirror**
-2. Verify that the selected drives are correct
-3. Click **Create** or **Save**
+> **Note**: RAID1 requires at least two hard drives. The image selects `sdb` and `sdc`, two 20G hard drives, to form a mirror. The final usable capacity is the capacity of a single hard drive (approximately 20G).
 
-!!! warning "Final Confirmation"
-    Creating the pool will erase all data on the selected drives. Please confirm that you have backed up important data.
+![ZFS RAID1 Devices](../../images/storage/raid1-devices.jpg)
 
-### 7. Wait for Initialization to Complete
+### 4. Create a ZFS Share
 
-The system will automatically initialize the RAID1 array. This may take from a few minutes to several hours, depending on drive capacity.
+After the RAID1 storage pool is created, you need to create a **ZFS Share** to access the data over the network (such as SMB/Samba). A ZFS share exposes a dataset in the storage pool to users on the local area network, making it convenient to read and write files on Windows, macOS, Linux, and other devices.
 
-- The pool can be used normally during initialization
-- After initialization, the RAID1 status will show as **Normal** or **Healthy**
+![ZFS Share](../../images/storage/zfs-share.jpg)
 
-## Verify RAID1
+The image above is the interface for creating a ZFS share. The meanings of each field are as follows:
 
-After creation, it is recommended to perform the following checks:
+| Field/Button | Description |
+|-----------|------|
+| **Select Dataset** | Select the ZFS dataset to be shared, e.g., `Photos` |
+| **Owner** | Set the owner user of the shared dataset. In the image, it is `joe` |
+| **Quota** | Limit the maximum space that the share can use. `none` means no limit |
+| **G** | Quota unit. Here it is GB (gigabytes) |
 
-1. **Check pool status**
-   - Open the storage management page
-   - Confirm that the RAID1 pool status shows Healthy
+After the creation is successful, you can access the share via Samba, for example:
 
-2. **Create a test dataset**
-   - Create a dataset or shared folder on the pool
-   - Test whether file read and write operations work normally
-
-3. **Create a share**
-   - Access via SMB share: `\\OneNAS_IP\SharedFolderName`
-   - Test file upload and download
+```
+\\OneNAS_IP\Photos
+```
 
 ## Frequently Asked Questions
 
-### Q: How many drives does RAID1 require?
+### Q: How many hard drives does RAID1 require?
 
-A: RAID1 requires at least two drives. With two drives, usable capacity equals the capacity of one drive. With more drives, you still only lose the capacity of one drive while gaining higher read performance.
+A: RAID1 requires at least two hard drives. When using two drives, the usable capacity is the capacity of a single hard drive. When using more hard drives, you still only lose the capacity of one hard drive, but you can get higher read performance.
 
-### Q: What should I do if one drive fails?
+### Q: What should I do if one hard drive fails?
 
-A: RAID1 allows continued operation with a single failed drive. Replace the failed drive as soon as possible, then perform a **resilver** or **replace** operation in the storage management page. The system will automatically mirror data to the new drive.
+A: RAID1 allows continued operation when a single drive fails. You need to replace the failed hard drive as soon as possible, and then perform a **Resync** or **Replace** operation on the storage management page. The system will automatically mirror the data to the new hard drive.
 
-### Q: Does RAID1 protect against accidental deletion?
+### Q: Can RAID1 prevent accidental deletion?
 
-A: No. RAID1 only protects against data loss caused by physical drive failure. It does not protect against accidental deletion, viruses, or ransomware. It is recommended to use snapshots or off-site backups together with RAID1.
+A: No. RAID1 only protects against data loss caused by physical hard drive failure; it cannot prevent accidental deletion. It is recommended to properly manage the **administrator account** and **root** account!
 
-## Recommendations
+## Follow-up Recommendations
 
-- Regularly check RAID1 status in the web management interface
-- Configure email or notification alerts to stay informed about drive failures
-- Important data should also be backed up off-site
-- Familiarize yourself with drive replacement and rebuild procedures
+- Regularly check the RAID1 status in the web management interface
+- Configure email or notification alerts to stay informed about hard drive failures
+- Important data is recommended to be additionally backed up off-site
+- Familiarize yourself with the hard drive replacement and rebuild process, just in case
