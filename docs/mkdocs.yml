@@ -46,6 +46,8 @@ plugins:
             首页: Home
             快速入门: Quick Start
             5分钟快速安装OneNAS: 5-Minute Quick Install OneNAS
+            存储管理: Storage Management
+            如何创建镜像RAID1: How to Create a RAID1 Mirror
       reconfigure_material: true
       reconfigure_search: true
 
@@ -62,6 +64,8 @@ nav:
   - 首页: index.md
   - 快速入门:
     - 5分钟快速安装OneNAS: quick-start/index.md
+  - 存储管理:
+    - 如何创建镜像RAID1: raid1/index.md
 
 markdown_extensions:
   - admonition
